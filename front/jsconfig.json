@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "module": "es2015",
+    "lib": ["es2018", "esnext.asynciterable", "dom.iterable"],
+    "target": "es2018",
+  }
+}

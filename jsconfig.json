@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "module": "commonjs",
+    "lib": ["es2018"],
+    "target": "es2018"
+  },
+  "exclude": [
+    "front",
+    "node_modules"
+  ]
+}

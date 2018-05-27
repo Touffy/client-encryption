@@ -1,0 +1,26 @@
+{
+  "name": "client-encryption",
+  "version": "1.0.0",
+  "description": "A todolist where only you know what you have to do",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Touffy/client-encryption.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "keywords": [
+    "crypto",
+    "todolist"
+  ],
+  "author": "David Junger <junger.d@sfeir.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "lru-cache": "^4.1.3"
+  },
+  "devDependencies": {}
+}
