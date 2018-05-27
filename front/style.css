@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+}
+input, button {
+  font-size: inherit;
+}
+input {
+  width: 100%;
+  margin: 0;
+}
+button {
+  border-radius: 0.2em;
+  background: silver;
+  color: white;
+  border: 0;
+  margin: 0 0 0 5px;
+}
+label {
+  flex: 1 0 auto;
+}
+form {
+  display: flex;
+}
+form:valid button {
+  background: #16c416;
+}
+ul {
+  column-width: 20em;
+  column-gap: 2.5em;
+}
+li {
+  margin: 0.6em 0;
+}
+h1 {
+  font-weight: normal;
+}
+h1 > span {
+  font-size: 0.9rem;
+}

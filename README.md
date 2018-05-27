@@ -14,6 +14,8 @@ It will serve the storage backend API (consisting of `GET /todos`, `PUT /todo/:i
 As of this writing, it is not a standalone server: the node.js app will only serve the API. You are expected to use an HTTPS server like nginx to serve the static files inside the 'front' directory, and, if you'd like to, reverse-proxy the API. You don't *have* to proxy the node app, though, since it implements CORS on its own.
 For anything else than localhost, the nginx server *must* use HTTPS, otherwise the browser will refuse to use `crypto.subtle`.
 
+The app uses modules and async iterables on the client-side, so it'll only run on very recent versions of Chrome, Firefox, and Safari DP. Feel free to transpile for your own needs. Also, native modules means a lot of round-trips if you haven't set up HTTP/2 Push.
+
 ## how does it work?
 
 The server is basically an in-memory key-value store with a LRU cache mechanism to mitigate abuse (only the 2000 most recent messages will remain in storage). Each buffer is identified with a 12-byte number (chosen by the client) and limited to 5000 bytes. Both limits can be changed easily. The API accepts GET, PUT and DELETE from anyone, with any valid ID. The GET endpoint returns every message, concatenated in raw binary format (12 bytes for ID + 2 bytes for length + content).
